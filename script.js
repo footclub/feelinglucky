@@ -1,33 +1,15 @@
-const slots = document.querySelectorAll('.slot');
-const spinButton = document.getElementById('spin');
-const resultText = document.getElementById('result');
-
-let currentValues = ['🍩','☕', '🧁'];
-let previousValues = null;
+const symbols = ['🍒', '🍋', '🍊', '🍇', '🍉'];
 
 function spin() {
-  previousValues = currentValues.slice();
-  currentValues = currentValues.map(() => {
-    const randomIndex = Math.floor(Math.random() * 3);
-    return currentValues[randomIndex];
-  });
+const slot1 = document.getElementById('slot1');
+const slot2 = document.getElementById('slot2');
+const slot3 = document.getElementById('slot3');
 
-  updateSlots();
-  checkResult();
+slot1.innerText = getRandomSymbol();
+slot2.innerText = getRandomSymbol();
+slot3.innerText = getRandomSymbol();
 }
 
-function updateSlots() {
-  slots.forEach((slot, index) => {
-    slot.textContent = currentValues[index];
-  });
+function getRandomSymbol() {
+return symbols[Math.floor(Math.random() * symbols.length)];
 }
-
-function checkResult() {
-  if (currentValues.every((value, index) => value === previousValues[index])) {
-    resultText.textContent = 'You won!';
-  } else {
-    resultText.textContent = 'Try again!';
-  }
-}
-
-spinButton.addEventListener('click', spin);
