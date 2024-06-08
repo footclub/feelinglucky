@@ -2,13 +2,13 @@ const slots = document.querySelectorAll('.slot');
 const spinButton = document.getElementById('spin');
 const resultText = document.getElementById('result');
 
-let currentValues = ['🍩','☕', '🧁', '🍔'];
+let currentValues = ['🍩','☕', '🧁'];
 let previousValues = null;
 
 function spin() {
   previousValues = currentValues.slice();
   currentValues = currentValues.map(() => {
-    const randomIndex = Math.floor(Math.random() * 4);
+    const randomIndex = Math.floor(Math.random() * 3);
     return currentValues[randomIndex];
   });
 
