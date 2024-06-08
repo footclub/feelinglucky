@@ -8,7 +8,7 @@ let previousValues = null;
 function spin() {
   previousValues = currentValues.slice();
   currentValues = currentValues.map(() => {
-    const randomIndex = Math.floor(Math.random() * 3);
+    const randomIndex = Math.floor(Math.random() * 4);
     return currentValues[randomIndex];
   });
 
