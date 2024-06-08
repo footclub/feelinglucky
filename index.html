@@ -10,6 +10,9 @@
 			line-height: 5em;
 			text-align: center;
 			width: 5em;
+			position: absolute;
+			top: 0;
+			transition: top 1s;
 		}
 	</style>
 </head>
@@ -49,11 +52,13 @@
 			slot3.style.top = `${pos3 * -100}%`;
 
 			// Check if the slots match
-			if (pos1 === pos2 && pos2 === pos3) {
-				alert("You win!");
-			} else {
-				alert("You lose!");
-			}
+			setTimeout(() => {
+				if (pos1 === pos2 && pos2 === pos3) {
+					alert("You win!");
+				} else {
+					alert("You lose!");
+				}
+			}, 1000);
 		}
 	</script>
 </body>
