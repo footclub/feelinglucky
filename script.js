@@ -1,4 +1,4 @@
-const symbols = ['☕', '🍋', '🍊', '🍇', '🍉'];
+const symbols = ['', '🍋', '🍊', '🍇', '🍉','☕'];
 const winningCombination = ['☕', '☕', '☕']; // Define a winning combination
 
 function spin() {
