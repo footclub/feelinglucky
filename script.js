@@ -1,5 +1,5 @@
-const symbols = ['🍒', '🍋', '🍊', '🍇', '🍉'];
-const winningCombination = ['🍒', '🍒', '🍒']; // Define a winning combination
+const symbols = ['☕', '🍋', '🍊', '🍇', '🍉'];
+const winningCombination = ['☕', '☕', '☕']; // Define a winning combination
 
 function spin() {
     const slot1 = document.getElementById('slot1');
