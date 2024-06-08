@@ -2,7 +2,7 @@ const slots = document.querySelectorAll('.slot');
 const spinButton = document.getElementById('spin');
 const resultText = document.getElementById('result');
 
-let currentValues = ['😀', '😃', '😄'];
+let currentValues = ['🍩','☕', '🧁'];
 let previousValues = null;
 
 function spin() {
