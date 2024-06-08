@@ -1,65 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Slot Machine Game</title>
-	<style>
-		.slot {
-			display: inline-block;
-			font-size: 3em;
-			height: 5em;
-			line-height: 5em;
-			text-align: center;
-			width: 5em;
-			position: absolute;
-			top: 0;
-			transition: top 1s;
-		}
-	</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slot Machine</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<h1>Slot Machine Game</h1>
-	<div id="slots"></div>
-	<button onclick="spin()">Spin</button>
-
-	<script>
-		// Create the slot elements
-		const slot1 = document.createElement("div");
-		slot1.classList.add("slot");
-		slot1.textContent = "🍔";
-		const slot2 = document.createElement("div");
-		slot2.classList.add("slot");
-		slot2.textContent = "🍟";
-		const slot3 = document.createElement("div");
-		slot3.classList.add("slot");
-		slot3.textContent = "🥤";
-
-		// Add the slot elements to the page
-		const slotsElement = document.getElementById("slots");
-		slotsElement.appendChild(slot1);
-		slotsElement.appendChild(slot2);
-		slotsElement.appendChild(slot3);
-
-		// Spin the slot machine
-		function spin() {
-			// Generate random positions for each slot
-			const pos1 = Math.floor(Math.random() * 5);
-			const pos2 = Math.floor(Math.random() * 5);
-			const pos3 = Math.floor(Math.random() * 5);
-
-			// Set the slot positions
-			slot1.style.top = `${pos1 * -100}%`;
-			slot2.style.top = `${pos2 * -100}%`;
-			slot3.style.top = `${pos3 * -100}%`;
-
-			// Check if the slots match
-			setTimeout(() => {
-				if (pos1 === pos2 && pos2 === pos3) {
-					alert("You win!");
-				} else {
-					alert("You lose!");
-				}
-			}, 1000);
-		}
-	</script>
+<div class="slot-machine">
+<div class="slot" id="slot1"></div>
+<div class="slot" id="slot2"></div>
+<div class="slot" id="slot3"></div>
+<button onclick="spin()">Spin</button>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
