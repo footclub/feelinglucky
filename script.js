@@ -1,4 +1,4 @@
-const symbols = ['', '🍋', '🍊', '🍇', '🍉','☕'];
+const symbols = [ '🍋', '🍊', '🍇', '🍉','☕'];
 const winningCombination = ['☕', '☕', '☕']; // Define a winning combination
 
 function spin() {
@@ -27,10 +27,10 @@ function getRandomSymbol() {
 
 function displayWinMessage() {
     const message = document.getElementById('message');
-    message.innerText = 'You Win!';
+    message.textContent = 'You Win!';
 }
 
 function clearWinMessage() {
     const message = document.getElementById('message');
-    message.innerText = '';
+    message.textContent = '';
 }
