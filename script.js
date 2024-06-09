@@ -17,7 +17,8 @@ async function spin() {
     const symbol1 = getRandomSymbol();
     const symbol2 = getRandomSymbol();
     const symbol3 = getRandomSymbol();
-          
+
+    await new Promise(resolve => setTimeout(resolve, 1000));
     slot1.innerText = symbol1;
     slot1.classList.remove('spin-animation'); 
     await new Promise(resolve => setTimeout(resolve, 1000));
