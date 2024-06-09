@@ -1,6 +1,6 @@
 const symbols = ['🍋', '🍊', '🍇', '🍉', '☕'];
 const winningCombination = ['☕', '☕', '☕'];
-const validToken = 'secret'; // Define the valid token
+const validToken = 'boofi'; // Define the valid token
 let spinsRemaining = 0;
 
 function validateToken() {
