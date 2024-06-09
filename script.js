@@ -9,26 +9,32 @@ function spin() {
     slot1.classList.add('spin-animation');
     slot2.classList.add('spin-animation');
     slot3.classList.add('spin-animation');
-
-    setTimeout(() => {
-        const symbol1 = getRandomSymbol();
-        const symbol2 = getRandomSymbol();
-        const symbol3 = getRandomSymbol();
-
+    
+    const symbol1 = getRandomSymbol();
+    const symbol2 = getRandomSymbol();
+    const symbol3 = getRandomSymbol();
+    
+    setTimeout(() => {        
         slot1.innerText = symbol1;
+        slot1.classList.remove('spin-animation');        
+     }, 1000); // Adjust the time for the spinning animation
+    
+    setTimeout(() => {
         slot2.innerText = symbol2;
-        slot3.innerText = symbol3;
+        slot2.classList.remove('spin-animation');        
+     }, 1000); // Adjust the time for the spinning animation
+    
+    setTimeout(() => {
+        slot3.innerText = symbol1;
+        slot3.classList.remove('spin-animation');        
+     }, 1000); // Adjust the time for the spinning animation    
 
-        slot1.classList.remove('spin-animation');
-        slot2.classList.remove('spin-animation');
-        slot3.classList.remove('spin-animation');
 
-        if (winner == symbol1 && winner == symbol2 && winner === symbol3) {
-            displayWinMessage();
-        } else {
-            clearWinMessage();
-        }
-    }, 2000); // Adjust the time for the spinning animation
+    if (winner == symbol1 && winner == symbol2 && winner === symbol3) {
+        displayWinMessage();
+    } else {
+        clearWinMessage();
+    }
 }
 
 function getRandomSymbol() {
